@@ -1,0 +1,148 @@
+:root {
+    --azul: #2196f3;
+    --preto: #000000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--preto);
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: var(--azul);
+}
+
+h1,
+h2,
+h3 {
+    font-weight: bold;
+    color: var(--azul);
+}
+
+h1 {
+    font-size: 2rem;
+    /* A2 - maior título */
+}
+
+h2 {
+    font-size: 1.5rem;
+    /* A4 - subtítulo */
+}
+
+header {
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 2px solid var(--azul);
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Seção Sobre a Loja */
+.sobre {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    border: 2px solid var(--azul);
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.sobre-imagem,
+.sobre-texto {
+    flex: 1 1 300px;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: auto;
+    border: 2px solid var(--azul);
+    border-radius: 8px;
+    display: block;
+}
+
+.sobre-texto p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Seção de Produtos */
+.produtos-titulo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.produtos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.produto {
+    border: 2px solid var(--azul);
+    border-radius: 8px;
+    padding: 20px;
+    flex: 1 1 220px;
+    max-width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.produto img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border: 2px solid var(--azul);
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.produto h3 {
+    margin: 10px 0 5px;
+    font-size: 1.1rem;
+}
+
+.produto p {
+    font-size: 0.9rem;
+    flex-grow: 1;
+}
+
+.btn-carrinho {
+    margin-top: 15px;
+    background-color: transparent;
+    color: var(--azul);
+    border: 2px solid var(--azul);
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-carrinho:hover {
+    background-color: var(--azul);
+    color: var(--preto);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 2px solid var(--azul);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+    .sobre {
+        flex-direction: column;
+    }
+}
